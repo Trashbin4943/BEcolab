@@ -1,0 +1,39 @@
+# 환경변수 파일
+.env
+.env.local
+.env.production
+
+# 데이터베이스
+*.sqlite3
+db.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+myvenv/
+ENV/
+
+# Django
+*.log
+local_settings.py
+media/
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Migration files (선택사항)
+*/migrations/*.py
+!*/migrations/__init__.py
