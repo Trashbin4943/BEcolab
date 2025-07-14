@@ -1,40 +1,22 @@
-# Django 기본
+asgiref==3.9.1
+certifi==2025.7.9
+cffi==1.17.1
+charset-normalizer==3.4.2
+cryptography==45.0.5
+dj-rest-auth==7.0.1
 Django==5.2.4
-
-# Django REST Framework
-djangorestframework==3.15.2
-
-# JWT 인증
-djangorestframework-simplejwt==5.3.0
-dj-rest-auth[with_social]==6.0.0
-
-# Django Allauth (소셜 로그인)
-django-allauth==0.63.3
-
-# CORS 처리
-django-cors-headers==4.3.1
-
-# HTTP 요청 (seed_movies.py에서 사용)
-requests==2.31.0
-
-# 환경변수 관리 (권장)
+django-allauth==65.10.0
+django-cors-headers==4.7.0
+djangorestframework==3.16.0
+djangorestframework_simplejwt==5.5.0
+gunicorn==23.0.0
+idna==3.10
+mysqlclient==2.2.7
+packaging==25.0
+pycparser==2.22
+PyJWT==2.9.0
 python-decouple==3.8
-
-# 데이터베이스 (SQLite는 Python 내장이지만 PostgreSQL 사용시)
-psycopg2-binary==2.9.9
-
-# 보안 강화 패키지들 (선택사항)
-django-ratelimit==4.1.0
-django-defender==0.9.7
-
-# 개발환경 도구들 (선택사항)
-django-debug-toolbar==4.2.0
-django-extensions==3.2.3
-
-# 테스트 도구 (선택사항)
-pytest-django==4.8.0
-factory-boy==3.3.0
-
-# 배포 관련 (선택사항)
-gunicorn==21.2.0
-whitenoise==6.6.0
+requests==2.32.4
+sqlparse==0.5.3
+tzdata==2025.2
+urllib3==2.5.0

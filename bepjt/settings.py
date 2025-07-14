@@ -22,8 +22,8 @@ SITE_ID = 1
 import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-key-for-local-dev-only')
-DEBUG = os.environ.get('DEBUG','False').lower()=='true'
-ALLOWED_HOSTS= os.environ.get('ALLOWED_HOSTS', 'localhost.127.0.0.1').split(',')
+DEBUG = False
+ALLOWED_HOSTS= ['127.0.0.1','13.209.0.75','movielike.store']
 
 
 # Application definition
@@ -213,3 +213,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'  
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
