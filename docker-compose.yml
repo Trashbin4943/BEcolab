@@ -1,6 +1,7 @@
 version: '3'
 services:
     web:
+        build: .
         image: server
         container_name: server_container
         command: bash -c "gunicorn bepjt.wsgi:application -b 0.0.0.0:8000" # 서버 실행
