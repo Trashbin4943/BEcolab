@@ -2,6 +2,7 @@ from rest_framework import status,generics
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.filters import SearchFilter
 from django.shortcuts import get_object_or_404
 from .models import *
 from .serializers import *
@@ -9,6 +10,8 @@ from .serializers import *
 class MovieListView(generics.ListAPIView):
     queryset = Movie.objects.all()
     serializer_class=MovieListSerializer
+    filter_backends=[SearchFilter]
+    search_fields=['title_kor','title_eng']
 
 class MovieDetailView(generics.RetrieveAPIView):
     queryset = Movie.objects.all()
