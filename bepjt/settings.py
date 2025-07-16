@@ -15,15 +15,12 @@ from datetime import timedelta
 import pymysql
 from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-SITE_ID = 1
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-key-for-local-dev-only')
-DEBUG = False
 ALLOWED_HOSTS= ['127.0.0.1','13.209.0.75','movielike.store']
 
 
@@ -88,20 +85,29 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bepjt.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+from pathlib import Path
+from decouple import config
 
-pymysql.install_as_MySQLdb()
+BASE_DIR = Path(__file__).resolve().parent.parent
+DEBUG = True
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'), # DB(스키마) 이름
-        'USER': config('DB_USER'), # 유저 이름 (root)
-        'PASSWORD': config('DB_PASSWORD'), # DB 비밀번호
-        'HOST': config('DB_HOST'), # DB 엔드포인트
-        'PORT': 3306,
-    }
-}
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
+ }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': config('DB_NAME'),
+#        'USER': config('DB_USER'),
+#        'PASSWORD': config('DB_PASSWORD'),
+#        'HOST': config('DB_HOST'),
+#        'PORT': 3306,
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
