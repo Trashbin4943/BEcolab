@@ -31,10 +31,10 @@ services:
     certbot:
         image: certbot/certbot # ✅ 들여쓰기 맞음
         container_name: certbot
-        restart: unless-stopped
+        restart: 'no'
         volumes:
             - ./cert/certbot/conf:/etc/letsencrypt
             - ./cert/certbot/www:/var/www/certbot
-
+        command: certonly --webroot --webroot-path=/var/www/certbot -d movielike.store --email your-email@example.com --agree-tos --no-eff-email --force-renewal
 networks:
     server:
