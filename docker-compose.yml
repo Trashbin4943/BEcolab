@@ -35,6 +35,6 @@ services:
         volumes:
             - ./cert/certbot/conf:/etc/letsencrypt
             - ./cert/certbot/www:/var/www/certbot
-        command: certonly --webroot --webroot-path=/var/www/certbot -d movielike.store --email your-email@example.com --agree-tos --no-eff-email --force-renewal
+        command: certonly --webroot --webroot-path=/var/www/certbot -d movielike.store --email anthonyhwang415@gmail.com --agree-tos --no-eff-email --force-renewal
 networks:
     server:
