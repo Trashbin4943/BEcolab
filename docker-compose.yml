@@ -29,12 +29,12 @@ services:
             - server
 
     certbot:
-    image: certbot/certbot
-    container_name: certbot
-    restart: unless-stopped
-    volumes:
-        - ./cert/certbot/conf:/etc/letsencrypt
-        - ./cert/certbot/www:/var/www/certbot
+        image: certbot/certbot # ✅ 들여쓰기 맞음
+        container_name: certbot
+        restart: unless-stopped
+        volumes:
+            - ./cert/certbot/conf:/etc/letsencrypt
+            - ./cert/certbot/www:/var/www/certbot
 
 networks:
     server:
