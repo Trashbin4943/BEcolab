@@ -21,7 +21,7 @@ from decouple import config
 import os
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-key-for-local-dev-only')
-ALLOWED_HOSTS= ['127.0.0.1','13.209.0.75','movielike.store']
+ALLOWED_HOSTS= ['127.0.0.1','13.209.0.75','movielike.store','www.movielike.store']
 
 
 # Application definition
