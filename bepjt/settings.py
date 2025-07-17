@@ -235,7 +235,7 @@ except ImportError:
 
 # Static files (CSS, JavaScript, Images)
 STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles",
+    BASE_DIR / "static",
 ]
 
 # drf-yasg static 파일을 위한 설정
