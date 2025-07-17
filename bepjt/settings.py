@@ -232,3 +232,14 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+
+# Static files (CSS, JavaScript, Images)
+STATICFILES_DIRS = [
+    BASE_DIR / "staticfiles",
+]
+
+# drf-yasg static 파일을 위한 설정
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
