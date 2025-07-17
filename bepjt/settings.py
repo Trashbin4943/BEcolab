@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'movies',
     'corsheaders',
     'allauth.socialaccount',
+    'drf_yasg',
+    'sample_swagger',
 ]
 
 MIDDLEWARE = [

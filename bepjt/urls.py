@@ -23,4 +23,5 @@ urlpatterns = [
     path('api/auth/registration/', include('dj_rest_auth.registration.urls')),
     path('api/users/', include('users.urls')),
     path('api/movies/', include('movies.urls')),
+    path('swagger/',include('sample_swagger.urls')),
 ]
