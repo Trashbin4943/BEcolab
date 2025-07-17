@@ -23,7 +23,7 @@ def movie_comments(request,movie_pk):
     movie=get_object_or_404(Movie, pk=movie_pk)
 
     if request.method == "GET":
-        comments=Comment.objects.filter(pk=movie_pk)
+        comments=Comment.objects.filter(movie=movie_pk)
         serializer=CommentSerializer(comments, many=True)
         return Response(serializer.data)
     
