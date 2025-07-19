@@ -17,6 +17,7 @@ services:
         container_name: nginx
         volumes:
             - ./nginx.default.conf:/etc/nginx/conf.d/default.conf
+            - ./frontend/build:/app/frontend/build
             - ./cert/certbot/conf:/etc/letsencrypt
             - ./cert/certbot/www:/var/www/certbot
         restart: unless-stopped

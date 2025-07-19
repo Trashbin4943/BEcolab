@@ -43,4 +43,4 @@ class Comment(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"{self.author.username} - {self.movie.title_kor}({self.rating})"
+        return f"{self.author.nickname} - {self.movie.title_kor}({self.rating})"
